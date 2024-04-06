@@ -9,10 +9,11 @@
     <h1>JavaScript Programming Logic</h1>
     
     <script>
-        var n1 = Number(prompt('Text a number:'));
-        var n2 = Number(prompt('Text a another number:'));
+        var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        var today = new Date();
+        var dayW = today.getDay();
 
-        alert((n1 + n2) / 2 > 5);
+        alert(`Welcome, today is ${days[dayW]}`);
     </script>
 </body>
 </html>

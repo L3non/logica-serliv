@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+    
+    <button onclick="showAreaAlert()">Show area (alert)</button>
+    <button onclick="showAreaOutput()">Show area (output)</button><br>
+
+    <output></output>
+    
+    <script>
+        showAreaAlert();
+        
+        function showAreaAlert() {
+            var width = Number(prompt('Text the rectangle width'));
+            var height = Number(prompt('Text the rectangle height'));
+
+            try {
+                var area = calculateArea(width, height);
+            } catch(e) {
+                area = e;
+            }
+
+            alert('Total rectangle area is: ' + area);
+        }
+
+        function showAreaOutput() {
+            var width = Number(prompt('Text the width'));
+            var height = Number(prompt('Text the height'));
+
+            try {
+                var area = calculateArea(width, height);
+            } catch(e) {
+                area = e;
+            }
+
+            document.querySelector('output').innerHTML = 'Total area is: ' + area;
+        }
+
+        function calculateArea(w, h) {
+            if (w == h || w == undefined || h == undefined) {
+                throw new Error('Two non-equal numbers are needed')
+            }
+
+            if (isNaN(w) || isNaN(h)) {
+                throw new Error('Only numbers are accepted');
+            }
+
+            return  w * h;
+        }
+
+    </script>
+</body>
+</html>

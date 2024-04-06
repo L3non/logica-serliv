@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+
+    <output></output>
+    
+    <script>
+        var products = [
+            {'name': 'pen', 'price': 2},
+            {'name': 'pencil', 'price': 1.2},
+            {'name': 'rubber', 'price': 0.5}
+        ];
+        var msg = '';
+
+        for(var i = 0; i < products.length; i++) {
+            console.log(products[i].price);
+
+            msg += `<h2>Product: ${products[i].name}</h2>`
+            msg += `<p>Price: ${products[i].price}</p>`
+        }
+        document.querySelector('output').innerHTML = msg;
+    </script>
+</body>
+</html>

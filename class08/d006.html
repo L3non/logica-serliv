@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+    
+    <script>
+        var n = Number(prompt('Text a number:'));
+        var m = 0;
+
+        while (m <= 100) {
+            document.write(`The number ${n} x ${m} is: ${n * m} <br>`);
+
+            if (m % 10 == 0 && m > 0) {
+                document.write(`<hr>`);
+            }
+            m++;
+        }
+
+    </script>
+</body>
+</html>

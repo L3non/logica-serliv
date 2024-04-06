@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+    
+    <button onclick="showAreaAlert()">Show area (alert)</button>
+    <button onclick="showAreaOutput()">Show area (output)</button><br>
+
+    <output></output>
+    
+    <script>
+        var area = calculateArea(width, height);
+        
+        function showAreaAlert() {
+            var width = Number(prompt('Text the width'));
+            var height = Number(prompt('Text the height'));
+
+            alert('Total area is: ' + area);
+        }
+
+        function showAreaOutput() {
+            var width = Number(prompt('Text the width'));
+            var height = Number(prompt('Text the height'));
+
+            document.querySelector('output').innerHTML = 'Total area is: ' + area;
+        }
+
+        function calculateArea(w, h) {
+            return  w * h;
+        }
+
+    </script>
+</body>
+</html>

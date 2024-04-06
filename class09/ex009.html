@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+    <input id="mt" type="button" value="Multiplication Table">
+    <input id="clear" type="button" value="Clear"><br>
+    <output id="res"></output>
+    
+    <script>
+        var mt = document.querySelector('input#mt');
+        var c = document.querySelector('input#clear');
+        var res = document.querySelector('output#res');
+        var msg = '';
+
+        mt.addEventListener('click', multiplicationTable);
+        c.addEventListener('click', clear);
+
+        function multiplicationTable() {
+            var n = Number(prompt('Text a number:'));
+
+            clear();
+            
+            for (var i = 1; i <= 1000; i++) {
+            msg += `${n} x ${i} = ${n * i} <br>`;
+            }
+
+            res.innerHTML = msg;
+        }
+
+        function clear() {
+            msg = '';
+
+            res.innerHTML = msg;
+        }
+
+    </script>
+</body>
+</html>

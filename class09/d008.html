@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+
+    <input id="sum" type="button" value="+">
+    <input id="sub" type="button" value="-">
+    <input id="mul" type="button" value="x">
+    <input id="div" type="button" value="/"><br>
+
+    <output id="res"></output>
+    
+    <script>
+        var sum = document.querySelector('input#sum');
+        var sub = document.querySelector('input#sub');
+        var mul = document.querySelector('input#mul');
+        var div = document.querySelector('input#div');
+        var res = document.querySelector('output#res');
+        
+        sum.addEventListener('click', s);
+        sub.addEventListener('click', subtraction);
+        mul.addEventListener('click', multiplication);
+        div.addEventListener('click', division);
+
+        var n = Number(prompt('Text a number:'));
+        res.innerHTML = n;
+
+        function s() {
+            var n1 = Number(prompt('Text a another number:'));
+            n += n1;
+            res.innerHTML = n;
+        }
+
+        function subtraction() {
+            var n1 = Number(prompt('Text a another number:'));
+            n -= n1;
+            res.innerHTML = n;
+        }
+
+        function multiplication() {
+            var n1 = Number(prompt('Text a another number:'));
+            n *= n1;
+            res.innerHTML = n;
+        }
+
+        function division() {
+            var n1 = Number(prompt('Text a another number:'));
+            n /= n1;
+            res.innerHTML = n;
+        }
+
+    </script>
+</body>
+</html>

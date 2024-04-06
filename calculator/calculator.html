@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+	<main id="calculator">
+		<output>0</output>
+		
+		<section id="buttons">
+			<button class="specialbtn" onclick="clean()">AC</button>
+			<button class="specialbtn" onclick="startCalc('/')">/</button>
+			<button class="specialbtn" onclick="startCalc('*')">x</button>
+			<button class="specialbtn" onclick="backSpace()"><i class="fa-solid fa-delete-left"></i></button>
+			<button onclick="addNum('7')">7</button>
+			<button onclick="addNum('8')">8</button>
+			<button onclick="addNum('9')">9</button>
+			<button class="specialbtn" onclick="startCalc('-')">-</button>
+			<button onclick="addNum('4')">4</button>
+			<button onclick="addNum('5')">5</button>
+			<button onclick="addNum('6')">6</button>
+			<button class="specialbtn" onclick="startCalc('+')">+</button>
+			<button onclick="addNum('1')">1</button>
+			<button onclick="addNum('2')">2</button>
+			<button onclick="addNum('3')">3</button>
+			<button onclick="getPercent()">%</button>
+			<button onclick="addNum('0')">0</button> 
+			<button onclick="addFloat()">.</button>
+			<button id="equal" onclick="finishCalc()">=</button>
+		</section>
+	</main>
+
+	<script src="scripts.js"></script>
+</body>
+</html>

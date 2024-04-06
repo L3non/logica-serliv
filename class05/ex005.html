@@ -12,7 +12,12 @@
         var n1 = Number(prompt('Text a number:'));
         var n2 = Number(prompt('Text a another number:'));
 
-        alert((n1 + n2) / 2 > 5);
+        if (n1 + n2 > 5) {
+            alert('Congratulations! You were approved');
+        } else {
+            alert('Sorry, but not this time');
+        }
+
     </script>
 </body>
 </html>

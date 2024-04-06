@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button><br>
+
+    <output id="res"></output>
+    
+    <script>
+        var n = Number(prompt('Text a number:'));
+        res.innerHTML = n;
+
+        function calculate(c) {
+            var n1 = Number(prompt('Text a another number:'));
+
+            switch(c) {
+                case '+':
+                    n += n1;
+                    break;
+                case '-':
+                    n -= n1;
+                    break;
+                case '*':
+                    n *= n1;
+                    break;
+                case '/':
+                    n /= n1;
+                    break;
+            }
+
+            res.innerHTML = n;
+        }
+
+    </script>
+</body>
+</html>

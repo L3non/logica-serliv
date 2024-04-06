@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+
+    <output></output>
+    
+    <script>
+        var output = document.querySelector('output');
+
+        var products = new Array('pen', 'pencil', 'scissors', 'rubber', 'notebook', 'book');
+        products.push('compass', 'cardboard')
+        var msg = '';
+
+        for (var i = 0; i < products.length; i++) {
+            msg += `Product ${i + 1}: ${products[i]}  <br>`;
+        }
+        output.innerHTML = msg;
+
+    </script>
+</body>
+</html>

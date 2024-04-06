@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+
+    <output></output>
+    
+    <script>
+        var users = [
+            {'name': 'João', 'email': 'joao123@gmail.com'},
+            {'name': 'José', 'email': 'jose123@gmail.com'},
+            {'name': 'Maria', 'email': 'maria123@gmail.com'}
+        ];
+        var msg = '';
+
+        for(var i = 0; i < users.length; i++) {
+            msg += `Name: ${users[i].name} <br>`;
+            msg += `Email: ${users[i].email} <br>`;
+        }
+        document.querySelector('output').innerHTML = msg;
+    </script>
+</body>
+</html>

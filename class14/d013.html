@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programming Logic</title>
+</head>
+<body>
+    <h1>JavaScript Programming Logic</h1>
+    
+    <output></output>
+
+    <script>
+        var output = document.querySelector('output');
+        var msg = '';
+        
+        var pen = new Object();
+        pen.name = 'Pen';
+        pen.price = 2.2;
+        pen.stock = 10;
+        pen.buy = function(qtd) {
+            if(!qtd) {
+                qtd = 1;
+            }
+
+            console.log('Bought a pen');
+            this.stock -= qtd;
+            console.log(this.stock);
+        }
+
+        msg += `name: ${pen.name} <br> price: ${pen.price} <br> stock: ${pen.stock}`;
+        output.innerHTML = msg;
+
+    </script>
+</body>
+</html>

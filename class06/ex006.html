@@ -9,10 +9,15 @@
     <h1>JavaScript Programming Logic</h1>
     
     <script>
-        var n1 = Number(prompt('Text a number:'));
-        var n2 = Number(prompt('Text a another number:'));
+        var n1 = Number(prompt('Grade 1:'));
+        var n2 = Number(prompt('Grade 2:'));
 
-        alert((n1 + n2) / 2 > 5);
+        if ((n1 + n2) / 2 > 5 && n1 > 0 && n2 > 0) {
+            alert('Approved!')
+        } else {
+            alert('Disapproved!')
+        }
+
     </script>
 </body>
 </html>
