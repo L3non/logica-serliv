@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming logic with Javascript</title>
+</head>
+<body>
+    <h1>Programming logic with Javascript</h1>
+
+    <output></output>
+
+    <script>
+        var students = [
+            {name: 'Maria', grades: [2,5,8,9]},
+            {name: 'José', grades: [2,1,5,8]},
+            {name: 'João', grades: [1,5,3,2]},
+            {name: 'Ana', grades: [4,5,3,8]},
+            {name: 'Lucia', grades: [2,1,8,5]}
+        ];
+        var studentsAverage = 0;
+        var msg = '';
+
+        for (var i = 0; i < students.length; i++) {
+            msg += `<p>${students[i].name}</p>`;
+            var grades = students[i].grades;
+            msg += `<p>Grades: ${grades.join(' | ')}</p>`;
+            var totalGrades = 0;
+
+            for (var j = 0; j < grades.length; j++) {
+                totalGrades += grades[j];
+            }
+            var average = totalGrades / grades.length;
+            studentsAverage += average;
+            msg += `<p>The average is: ${average}<hr></p>`
+        }
+        msg += `<p>The average of all students is: ${(studentsAverage / students.length).toFixed(2)}</p>`
+        document.querySelector('output').innerHTML = msg;
+    </script>
+</body>
+</html>

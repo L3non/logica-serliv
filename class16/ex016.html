@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming logic with Javascript</title>
+</head>
+<body>
+    <h1>Programming logic with Javascript</h1>
+
+    <output></output>
+
+    <script>
+    // Matriz / Matrix
+        var scores = [
+            [5, 6, 4, 3], [2, 8, 5, 6], 
+            [3, 6, 4, 8], [2, 8, 4, 9]
+        ];
+        var msg= '';
+        var annualAverage = 0;
+
+        for (var i = 0; i < scores.length; i++) {
+            var totalTwoMonths = 0;
+
+            msg += `<p>${(i + 1)} two months grades: ${scores[i].join(', ')}</p>`
+
+            for(var j = 0; j < scores[i].length; j++) {
+                totalTwoMonths += scores[i][j];
+            }
+            var averageTwoMonths = totalTwoMonths / scores[i].length;
+            annualAverage += averageTwoMonths;
+            msg += `<p>The average of ${(i + 1)} two months is ${averageTwoMonths}</p><hr>`
+        }
+        annualAverage = annualAverage / scores.length;
+        msg += `<p>The annual average is: ${annualAverage.toFixed(2)}</p><hr>`;
+        document.querySelector('output').innerHTML = msg;
+    </script>
+</body>
+</html>

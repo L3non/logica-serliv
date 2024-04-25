@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming logic with Javascript</title>
+</head>
+<body>
+    <h1>Programming logic with Javascript</h1>
+
+    <output></output>
+
+    <script>
+        // Formal syntax
+        var obj = new Object();
+        obj.name = 'My object';
+        obj.function = function() {
+            console.log('I\'m a method')
+        }
+        console.log(obj.name);
+        obj.function();
+
+
+        // Literal syntax
+        var obj1 = {
+            name: 'My object 1',
+            function: function(){
+                console.log('I\'m a object 1 method')
+            }
+        }
+        console.log(obj1.name);
+        obj1.function();
+
+
+        // Custom objects
+        var address = {
+            'publicPlace': 'tal street',
+            'number': 2
+        }
+        var address1 = {
+            'publicPlace': 'tal that',
+            'number': 20
+        }
+        var address2 = {
+            'publicPlace': 'tal this',
+            'number': 10
+        }
+
+        var myArray = new Array();
+        var today = new Date();
+        var obj2 = new Object();
+
+        function Address(pub, n, zip) {
+            this.publicPlace = pub;
+            this.n = n;
+            this.zip = zip;
+
+            this.completeAddress = function(){
+                return this.publicPlace + ', ' + this.n;
+            }
+        }
+        var address = new Address('tal street', 2, '12345-456');
+        var address1 = new Address('this street', 10, '45678-987');
+
+        console.log(address.completeAddress())
+    </script>
+</body>
+</html>
