@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Boolean, Number and String - typeof</h1>
+
+    <script>
+        let msg = 'I\'m a "text message"';
+        console.log(typeof 0);
+        console.log(typeof '0');
+        console.log(typeof String(0));
+        console.log('---')
+
+        let isValid = true;
+        console.log(typeof isValid);
+        console.log('---')
+
+        console.log(Boolean('0')); // True
+        console.log(Boolean(0)); // False
+        console.log(Boolean(undefined)); // False
+        console.log(Boolean(null)); // False
+        console.log(Boolean("")); // False
+        console.log(Boolean(NaN)); // False
+        console.log('---')
+
+        let notDeclared = null;
+        console.log(notDeclared);
+        notDeclared = 0;
+        console.log(notDeclared);
+        console.log('---')
+
+        let n = parseFloat('a');
+        console.log(n);
+        console.log(typeof n);
+        console.log('---')
+
+        console.log(typeof undefined);
+        console.log(typeof null);
+        console.log(typeof 0);
+        console.log(typeof '');
+        console.log(typeof true);
+
+    </script>
+</body>
+</html>
