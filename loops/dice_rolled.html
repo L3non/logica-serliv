@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops - dice</h1>
+
+    <script>
+        let diceRolled = 0;
+        let even = 0;
+
+        while (true) {
+            let dice = parseInt(Math.random() * 6 + 1);
+            let dice1 = parseInt(Math.random() * 6 + 1);
+
+            console.log(dice, dice1, diceRolled, even);
+
+            if (dice == dice1) {
+                continue;
+            }
+            diceRolled++;
+
+            if ((dice + dice1) % 2 == 0) {
+                even++;
+            }
+
+            if (even >= 10) {
+                break;
+            }
+        }
+        console.log(`the dice were rolled ${diceRolled} times`)
+        
+    </script>
+</body>
+</html>

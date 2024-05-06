@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops </h1>
+
+    <script>
+        for (let i = 1004; i <= 2024; i += 4) {
+            if (i % 100 == 0 && i % 400 != 0) {
+                document.write(`${i} It's not a leap year<br>`);
+                continue;
+            }
+            document.write(`${i}<br>`);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops - multiplication table</h1>
+
+    <script>
+        let n = Number(prompt('Enter a number:'));
+        
+        if (isFinite(n)) {
+            for (let i = 0; i <= 1000; i++) {
+                document.write(`${n} x ${i} = ${n * i}<br>`);
+            }
+            document.write('Exited the loop');
+            
+        } else {
+            alert('Only enter numbers!');
+        }
+        
+    </script>
+</body>
+</html>
