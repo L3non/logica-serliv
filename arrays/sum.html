@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    
+    <script>
+        const numbers = [2, undefined, 31, 0, '9', 12, 'anything', 98, false, [], null];
+        let sum = 0;
+
+        for (let i = 0; i < numbers.length; i++) {
+            let n = numbers[i];
+            
+            /* Add only the actual numbers
+            if (typeof n == 'number') {
+                sum += n;
+            } */
+
+            // Converts string numbers to fact numbers
+            if (isFinite(n)){
+                sum += Number(n);
+            }
+
+        }
+        alert(`The sum of all numbers is: ${sum}`);
+
+    </script>
+</body>
+</html>

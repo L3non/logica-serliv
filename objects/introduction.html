@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>Objects</h1>
+
+    <script>
+        // Problem 1
+        const pen = {
+            name: 'pen',
+            price: 2,
+            amount: 5,
+        };
+
+        document.write(`${pen.name} costs R$${pen.price} reais and are ${pen.amount} units in stock <br>`);
+
+        // Problem 2
+        const car = {
+            model: 'Uno',
+            year: 2023,
+            km: 10000,
+            fuel: 'gasoline',
+            litersConsumed: 625
+        };
+
+        document.write(`The ${car.model} year ${car.year} car made an average of ${car.km / car.litersConsumed} Km/L of ${car.fuel}`);
+
+    </script>
+</body>
+</html>

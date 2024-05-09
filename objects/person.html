@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const address = {
+            country: 'Brasil',
+            state: 'Brasília'
+        };
+        const person = {
+            name: 'Giovanna',
+            lastName: 'Oliveira',
+            address
+        };
+
+        document.write(`The ${person.name} lives in ${person.address.state}`)
+
+        // loop for ... in used to interact with an object
+        for (let prop in person) {
+            console.log(prop);
+            // console.log(person.prop) = undefined
+            console.log(person[prop]);
+        }
+        //1 - 'name' == person['name'] == person.name
+        //2 - 'lastName' == person['lastName'] == person.lastName
+        //3 - 'address' == person['address'] == person.address
+
+    </script>
+</body>
+</html>
