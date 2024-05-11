@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="title">Any title</h1>
+    <p id="paragraph">This is just a paragraph containing any <i>italicizes text</i></p>
+    <hr>
+    <input type="text" id="user" value="filled value">
+    <hr>
+    <h2>To do list</h2>
+    <ol id="todoList">
+        <li>Learn CSS</li>
+        <li>Learn Javascript</li>
+        <li>Learn DOM deeply</li>
+        <li>Crate something</li>
+    </ol>
+    
+    <script>
+        document.getElementById('title').textContent = 'Changed title 2';
+        const list = document.getElementById('todoList');
+        let newChore = 'Apply to job vacancies';
+        list.innerHTML += '<li>Test 2</li>';
+
+    </script>
+</body>
+</html>
