@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+
+    <style>
+        table, th, td {border: 1px solid #000;}
+        table {border-collapse: collapse;}
+        th, td {padding: 10px;}
+        td+td{text-align: right;}
+    </style>
+
+</head>
+<body>
+    <h1>Products table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody id="productsTable">
+            <tr>
+                <td>Scissors</td>
+                <td>R$7.00</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Eraser</td>
+                <td>R$3.00</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Case</td>
+                <td>R$15.00</td>
+                <td>8</td>
+            </tr>
+        </tbody> 
+    </table>
+
+    <script>
+        const productsTable = document.querySelector('tbody#productsTable');
+        
+        const products = [
+            {name: 'Pen', price: 4, stock: 5},
+            {name: 'Pencil', price: 2, stock: 10},
+            {name: 'Book', price: 10, stock: 3},
+        ];
+
+        for (let i = 0; i < products.length; i++) {
+            productsTable.innerHTML += `<tr><td>${products[i].name}</td><td>R$${products[i].price.toFixed(2)}</td><td>${products[i].stock}</td></tr>`;
+        };
+
+    </script>
+</body>
+</html>

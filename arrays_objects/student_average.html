@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <h1>Student information</h1>
+
+    <output id="output"></output>
+
+    <script>
+        const output = document.querySelector('output#output');
+        const student = {
+            name: 'Daniel',
+            grades: [10, 3, 9, 8],
+        };
+        let average = 0;
+
+        output.innerHTML = `<h2>Student: ${student.name}</h2>`;
+        output.innerHTML += '<p>Grades:</p>';
+
+        output.innerHTML += '<ul>';
+        for (let i = 0; i < student.grades.length; i++) {
+            output.innerHTML += `<li>${student.grades[i]}</li>`;
+
+            average += student.grades[i] / student.grades.length;
+        }
+        output.innerHTML += '</ul>';
+        output.innerHTML += `<p>Average: ${average}</p>`;
+
+        let approved = (average >= 7) ? 'Yes' : 'No';
+        output.innerHTML += `Approved? ${approved}`;
+
+    </script>
+</body>
+</html>

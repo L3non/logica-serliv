@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <ul id="peopleList"></ul>
+
+    <script>
+        const peopleList = document.querySelector('ul#peopleList');
+        
+        const people = [
+            {name: 'Daniel', email: 'daniel@server.com'},
+            {name: 'Maria', email: 'maria@server.com'},
+            {name: 'João', email: 'joao@server.com'},
+            {name: 'Luciane', email: 'luciane@server.com'},
+            {name: 'Ricardo', email: 'ricardo@server.com'},
+        ];
+
+        for (let i = 0; i < people.length; i++) {
+            peopleList.innerHTML += `<li>${people[i].name}: ${people[i].email}</li>`;
+        };
+
+    </script>
+</body>
+</html>

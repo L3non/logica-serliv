@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <h1>Students grades</h1>
+
+    <ul id="studentsList">
+        <!-- <li>Daniel
+            <ul>
+                <li>1</li>
+                <li>3</li>
+                <li>3</li>
+                <li>8</li>
+            </ul>
+        </li>
+
+        <li>Maria
+            <ul>
+                <li>10</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+            </ul>
+        </li> -->
+    </ul>
+
+    <script>
+        const studentsList = document.querySelector('ul#studentsList');
+        const students = [
+            {name: 'Daniel', grades: [1, 3, 3, 8]},
+            {name: 'Maria', grades: [10, 7, 9, 8]},
+            {name: 'João', grades: [10, 6, 3, 0]},
+        ];
+        let studentsHTML = '';
+
+        for (let i = 0; i < students.length; i++) {
+            studentsHTML += `<li>${students[i].name}`;
+            studentsHTML += '<ul>';
+            for (let j = 0; j < students[i].grades.length; j++) {
+                studentsHTML += `<li>${students[i].grades[j]}</li>`;
+            }
+            studentsHTML += '</ul>';
+            studentsHTML += '</li>';
+        }
+        studentsList.innerHTML = studentsHTML;
+
+    </script>
+</body>
+</html>
