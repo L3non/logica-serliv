@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function</h1>
+
+    <input type="number" id="number">
+    <button id="btn">Show multiplication table</button>
+    <button id="btnC">Clear</button><br>
+    <output id="out"></output>
+
+    <script>
+        const input = document.querySelector('input#number');
+        const btn = document.querySelector('button#btn');
+        const btnC = document.querySelector('button#btnC');
+        const out = document.querySelector('output#out');
+
+        btn.addEventListener('click', showMultiplication);
+        btnC.addEventListener('click', clear);
+
+        let multHTML = '';
+
+        function showMultiplication() {
+            clear();
+            
+            const inputValue = Number(input.value);
+
+            for (let i = 1; i <= 100; i++) {
+                multHTML += `${inputValue} x ${i} = ${inputValue * i}<br>`;
+            }
+            out.innerHTML = multHTML;
+        }
+
+        function clear() {
+            multHTML = '';
+            out.innerHTML = multHTML;
+        }
+
+    </script>
+</body>
+</html>

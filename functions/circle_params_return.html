@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #555;">
+    <h1>Function circle area</h1>
+
+    <label for="radius">Radius: <input type="number" id="radius"></label>
+    <button id="btn">Calculate circle area from prompt and show in alert</button>
+    <button id="btn1">Calculate circle area from input and show in alert</button>
+    <br>
+    <button id="btn2">Calculate circle area from prompt and show in output</button>
+    <button id="btn3">Calculate circle area from input and show in output</button><br>
+    <output id="out"></output>
+
+    <script>
+        const radius = document.querySelector('input#radius');
+        const btn = document.querySelector('button#btn');
+            btn.addEventListener('click', showAreaPromptAlert);
+
+        const btn1 = document.querySelector('button#btn1');
+            btn1.addEventListener('click', showAreaInputAlert);
+        
+        const bt2 = document.querySelector('button#btn2');
+            btn2.addEventListener('click', showAreaPromptOutput);
+
+        const btn3 = document.querySelector('button#btn3');
+            btn3.addEventListener('click', showAreaInputOutput);
+
+        const out = document.querySelector('output#out');
+
+        let area = '';
+
+        function calculateArea(radius) {
+            area = Math.PI * radius ** 2;
+
+            return `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
+        }
+
+    </script>
+</body>
+</html>

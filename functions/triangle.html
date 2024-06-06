@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function triangle area</h1>
+
+    <label for="base">Base: <input type="number" id="base"></label>
+    <label for="height">Height: <input type="number" id="height"></label>
+    <button id="btn">Calculate triangle area</button><br>
+    <output id="out"></output>
+
+    <script>
+        const base = document.querySelector('input#base');
+        const height = document.querySelector('input#height');
+        const btn = document.querySelector('button#btn');
+        const out = document.querySelector('output#out');
+
+        btn.addEventListener('click', showArea);
+
+        let area = '';
+
+        function showArea() {
+            clear();
+            const bValue = Number(base.value);
+            const hValue = Number(height.value);
+
+            area = bValue * hValue / 2;
+            
+            out.innerHTML = `The area of a triangle with base ${bValue} and height ${hValue} is ${area}.`;
+        }
+
+        function clear() {
+            area = '';
+            out.innerHTML = area;
+        }
+
+    </script>
+</body>
+</html>

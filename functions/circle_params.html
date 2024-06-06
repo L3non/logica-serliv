@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function circle area</h1>
+
+    <label for="radius">Radius: <input type="number" id="radius"></label>
+    <button id="btn">Calculate circle area from prompt</button>
+    <button id="btn1">Calculate circle area from input</button><br>
+    <output id="out"></output>
+
+    <script>
+        const radius = document.querySelector('input#radius');
+        const btn = document.querySelector('button#btn');
+            btn.addEventListener('click', showAreaPrompt);
+
+        const btn1 = document.querySelector('button#btn1');
+            btn1.addEventListener('click', showAreaInput);
+
+        const out = document.querySelector('output#out');
+
+        let area = '';
+
+        function showAreaPrompt() {
+            const rValue = Number(prompt('Enter the radius'));
+            showArea(rValue);
+        }
+
+        function showAreaInput() {
+            const rValue = Number(radius.value);
+            showArea(rValue);
+        }
+
+        function showArea(radius) {
+            area = Math.PI * radius ** 2;
+
+            out.innerHTML = `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
+        }
+
+    </script>
+</body>
+</html>
