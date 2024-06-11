@@ -34,32 +34,31 @@
 
         function calculateArea(radius) {
             area = Math.PI * radius ** 2;
-
-            return `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
+            return area;
         }
 
         function showAreaPromptAlert() {
             let radius = Number(prompt('Enter the radius'));
-            let msg = calculateArea(radius);
-            alert(msg);
+            let area = calculateArea(radius);
+            alert(`The ara of a circle with radius ${radius} is ${area.toFixed(2)}`);
         }
 
         function showAreaInputAlert() {
             let radius = Number(radiusIn.value);
-            let msg = calculateArea(radius);
-            alert(msg);
+            let area = calculateArea(radius);
+            alert(`The ara of a circle with radius ${radius} is ${area.toFixed(2)}`);
         }
         
         function showAreaPromptOutput() {
             let radius = Number(prompt('Enter the radius'));
-            let msg = calculateArea(radius);
-            out.innerHTML = msg;
+            let area = calculateArea(radius);
+            out.innerHTML = `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
         }
 
         function showAreaInputOutput() {
             let radius = Number(radiusIn.value);
-            let msg = calculateArea(radius);
-            out.innerHTML = msg;
+            let area = calculateArea(radius);
+            out.innerHTML = `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
         }
 
     </script>

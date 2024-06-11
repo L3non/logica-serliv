@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+</head>
+<body>
+
+    <script>
+    // Challenge sum()
+        function sum(n, n1) {
+            return n + n1;
+        }
+        console.log(sum(2, 4));
+
+    // Challenge calculate()
+        function calculate(n, op, n1) {
+            if (op == '+' || op == '-' || op == '*' || op == '/') {
+                switch (op) {
+                case '+':
+                    return n + n1;
+                    break;
+                case '-':
+                    return n - n1;
+                    break;
+                case '*':
+                    return n * n1;
+                    break;
+                case '/':
+                    return n / n1;
+                    break;
+                }
+            } else {
+                console.log('Enter a valid arithmetic operator!');
+            }
+        }
+        console.log(calculate(4, 'a', 2))
+
+
+
+
+
+
+
+
+
+
+
+
+        var a = document.getElementById('area')
+            a.addEventListener('click', clicked)
+
+        function clicked() {}
+
+    </script>
+</body>
+</html>
