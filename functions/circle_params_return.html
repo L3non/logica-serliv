@@ -9,15 +9,15 @@
     <h1>Function circle area</h1>
 
     <label for="radius">Radius: <input type="number" id="radius"></label>
-    <button id="btn">Calculate circle area from prompt and show in alert</button>
-    <button id="btn1">Calculate circle area from input and show in alert</button>
+    <button id="btn">Calculate area from prompt and show in alert</button>
+    <button id="btn1">Calculate area from input and show in alert</button>
     <br>
-    <button id="btn2">Calculate circle area from prompt and show in output</button>
-    <button id="btn3">Calculate circle area from input and show in output</button><br>
+    <button id="btn2">Calculate area from prompt and show in output</button>
+    <button id="btn3">Calculate area from input and show in output</button><br>
     <output id="out"></output>
 
     <script>
-        const radius = document.querySelector('input#radius');
+        const radiusIn = document.querySelector('input#radius');
         const btn = document.querySelector('button#btn');
             btn.addEventListener('click', showAreaPromptAlert);
 
@@ -32,12 +32,34 @@
 
         const out = document.querySelector('output#out');
 
-        let area = '';
-
         function calculateArea(radius) {
             area = Math.PI * radius ** 2;
 
             return `The ara of a circle with radius ${radius} is ${area.toFixed(2)}`;
+        }
+
+        function showAreaPromptAlert() {
+            let radius = Number(prompt('Enter the radius'));
+            let msg = calculateArea(radius);
+            alert(msg);
+        }
+
+        function showAreaInputAlert() {
+            let radius = Number(radiusIn.value);
+            let msg = calculateArea(radius);
+            alert(msg);
+        }
+        
+        function showAreaPromptOutput() {
+            let radius = Number(prompt('Enter the radius'));
+            let msg = calculateArea(radius);
+            out.innerHTML = msg;
+        }
+
+        function showAreaInputOutput() {
+            let radius = Number(radiusIn.value);
+            let msg = calculateArea(radius);
+            out.innerHTML = msg;
         }
 
     </script>
