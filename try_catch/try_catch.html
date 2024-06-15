@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try... catch(error)</h1>
+
+    <div id="output"></div>
+
+    <script>
+        let obj = {name: 'Daniel', email: 'daniel@server.com'}
+        // obj = null
+
+        try {
+            document.getElementById('output').innerHTML = `Name: ${obj.name} - Email: ${obj.email}`;
+        } catch (e) {
+            console.log(e);
+            console.log(e.message);
+            alert(`It went bad!! ${e.message}`);
+        } finally {
+            alert('End of program');
+        }
+
+    </script>
+
+    <script src="areas.js"></script>
+    
+    <script>
+
+    </script>
+
+</body>
+</html>

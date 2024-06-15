@@ -16,42 +16,32 @@
 
     // Challenge calculate()
         function calculate(n, op, n1) {
-            if (op == '+' || op == '-' || op == '*' || op == '/') {
-                switch (op) {
-                case '+':
-                    return n + n1;
-                    break;
-                case '-':
-                    return n - n1;
-                    break;
-                case '*':
-                    return n * n1;
-                    break;
-                case '/':
-                    return n / n1;
-                    break;
-                }
-            } else {
-                console.log('Enter a valid arithmetic operator!');
+            switch (op) {
+            case '+':
+                return n + n1;
+            case '-':
+                return n - n1;
+            case '*':
+                return n * n1;
+            case '/':
+                return n / n1;
+            default:
+                return null;
             }
         }
-        console.log(calculate(4, 'a', 2))
+        console.log(calculate(4, '+', 4));
 
+    // Challenge isEven()
+        function isEven (n) {
+            return n % 2 == 0;
+        }
+        console.log(isEven(4));
 
-
-
-
-
-
-
-
-
-
-
-        var a = document.getElementById('area')
-            a.addEventListener('click', clicked)
-
-        function clicked() {}
+    // Challenge isLeapYear()
+        function isLeapYear (year) {
+            return year % 4 == 0 && (year % 100 != 0 || year % 400  == 0);
+        }
+        console.log(isLeapYear(2000));
 
     </script>
 </body>
